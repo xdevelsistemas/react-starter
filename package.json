@@ -45,7 +45,7 @@
     "typescript": "^3.0.0"
   },
   "lint-staged": {
-    "src/**/*.ts": [
+    "src/**/*.js": [
       "eslint --fix ",
       "prettier --config .prettierrc --write ",
       "git add "
