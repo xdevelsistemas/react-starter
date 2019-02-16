@@ -1,5 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+This project was configured with [prettier-standard]() 
+witch is a middle term and the best choice considering just preetier or standard.
 
 ## Available Scripts
 
