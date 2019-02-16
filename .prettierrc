@@ -6,3 +6,4 @@ bracketSpacing: true
 arrowParens: "avoid"
 endOfLine: "crlf"
 jsxSingleQuote: true
+spaceBeforeFunctionParen: false
