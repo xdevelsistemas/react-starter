@@ -3,6 +3,10 @@
   "rules": {
     "space-before-function-paren": "off"
   },
+  "parser": "babel-eslint",
+  "plugins": [
+    "react"
+  ]
   "env": {
     "jest": true,
     "browser": true
