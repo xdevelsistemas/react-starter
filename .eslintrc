@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "standard",
+    "standard-react"
+  ],
+  "rules": {
+    "space-before-function-paren": "off"
+  },
+  "env": {
+    "jest": true,
+    "browser": true
+  }
+}
