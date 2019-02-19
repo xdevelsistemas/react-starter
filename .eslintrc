@@ -11,7 +11,7 @@
   "parser": "babel-eslint",
   "plugins": [
     "react"
-  ]
+  ],
   "env": {
     "jest": true,
     "browser": true
