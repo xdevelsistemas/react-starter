@@ -3,11 +3,16 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
+    "build": "npm-run-all build-css build-js",
+    "build-js": "rimraf build && react-scripts build",
+    "build-css": "node-sass-chokidar src/layout/ -o src/layout/",
+    "format": "prettier --config .prettierrc --write 'src/**/*.js'",
     "lint": "eslint .",
-    "start": "react-scripts start",
-    "build": "rimraf build && react-scripts build",
+    "start": "npm-run-all -p watch-css start-js",
+    "start-js": "react-scripts start",
+    "eject": "react-scripts eject",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "watch-css": "npm run build-css && node-sass-chokidar src/layout/ -o src/layout/ --watch --recursive"
   },
   "browserslist": [
     ">0.2%",
@@ -28,13 +33,20 @@
     "eslint-plugin-standard": "^4.0.0",
     "husky": "^1.3.1",
     "lint-staged": "^8.1.3",
+    "node-sass-chokidar": "^1.3.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^1.16.4",
     "rimraf": "^2.6.3"
   },
   "dependencies": {
+    "classnames": "^2.2.6",
+    "primeflex": "^1.0.0-rc.1",
+    "primeicons": "^1.0.0",
+    "primereact": "^3.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
-    "react-scripts": "2.1.5"
+    "react-scripts": "2.1.5",
+    "react-transition-group": "^2.5.3"
   },
   "engines": {
     "node": "^10.0.0",
@@ -46,8 +58,8 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "eslint --fix ",
       "prettier --config .prettierrc --write ",
+      "eslint ",
       "git add "
     ]
   },
